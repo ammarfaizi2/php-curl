@@ -149,9 +149,59 @@ class Curl implements CurlContract
 		return $this->output;
 	}
 
+	/**
+	 * Get error message.
+	 *
+	 * @return string
+	 */
+	public function error()
+	{
+		return $this->error;
+	}
+
+	/**
+	 * Get error code.
+	 *
+	 * @return int
+	 */
+	public function errno()
+	{
+		return $this->errno;
+	}
+
+	/**
+	 * Get header response.
+	 *
+	 * @return array
+	 */
+	public function headerResponse()
+	{
+		return $this->headerResponse;
+	}
+
+	/**
+	 * Build return context.
+	 */
 	private function buildReturnContext()
 	{
-		var_dump($this->info);
+		$this->buildHeaderResponse();
+	}
+
+	/**
+	 * Build header response context.
+	 */
+	private function buildHeaderResponse()
+	{
+		foreach (explode(
+					"\n",
+					substr($this->output, 0, $this->info['header_size'])
+				) as $val) {
+			$val = trim($val);
+			if (! empty($val)) {
+				$this->headerResponse[] = $val;
+			}
+		}
+		$this->output = substr($this->output, $this->info['header_size']);
 	}
 
 	/**
