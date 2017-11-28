@@ -1,0 +1,20 @@
+{
+    "name": "ammarfaizi2/curl",
+    "description": "PHP Curl Class makes it easy to send HTTP requests.",
+    "homepage": "https://github.com/ammarfaizi2/php-curl",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["php", "curl", "class", "http", "client"],
+    "authors": [
+        {
+            "name": "Ammar Faizi",
+            "email": "ammarfaizi2@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.6",
+        "ext-curl": "*"
+    },
+    "autoload":
+}
