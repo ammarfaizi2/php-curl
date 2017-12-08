@@ -234,6 +234,14 @@ class Curl implements CurlContract
 	}
 
 	/**
+	 * @return array
+	 */
+	public function info()
+	{
+		return $this->info;
+	}
+
+	/**
 	 * Private url check.
 	 *
 	 * @param string $url
