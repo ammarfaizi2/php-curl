@@ -97,7 +97,7 @@ class Curl implements CurlContract
 	public function success($action)
 	{
 		if ($this->currentStep > 0) {
-			throw new \Exception("success method should be called before exec method.", 1);
+			throw new \Exception("success method must be called before exec method.", 1);
 		}
 		$this->successAction = $action;
 		return true;
@@ -111,7 +111,7 @@ class Curl implements CurlContract
 	public function setOpt($opt)
 	{
 		if ($this->currentStep > 0) {
-			throw new \Exception("setOpt method should be called before exec method.", 1);
+			throw new \Exception("setOpt method must be called before exec method.", 1);
 		}
 		$this->userOpt = $opt;
 	}
