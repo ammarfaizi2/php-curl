@@ -1,5 +1,5 @@
 {
-    "name": "ammarfaizi2/curl",
+    "name": "ammarfaizi2/php-curl",
     "description": "PHP Curl Class makes it easy to send HTTP requests.",
     "homepage": "https://github.com/ammarfaizi2/php-curl",
     "type": "library",
