@@ -7,12 +7,12 @@ use Curl\Contracts\Curl as CurlContract;
 /**
  * @author Ammar Faizi <ammarfaizi2@gmail.com> https://www.facebook.com/ammarfaizi2
  * @license MIT
- * @version 0.0.1
+ * @version 0.0.2
  */
 class Curl implements CurlContract
 {
 
-    const VERSION = "0.0.1";
+    const VERSION = "0.0.2";
 
     /**
      * @var string
